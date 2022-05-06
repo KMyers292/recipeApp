@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recipe_cards.DrinksRecipes"
+    android:background="@color/dark">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/appTitle"
+        android:text="@string/main_app_title"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:background="@drawable/border_bottom" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border_top" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipe_logo"
+        android:contentDescription="@string/recipe_logo_button_content_description"
+        android:src="@drawable/recipes_button"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="605dp"
+        android:layout_marginStart="100dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopping_list_logo"
+        android:contentDescription="@string/shopping_list_button_content_description"
+        android:src="@drawable/shopping_list_button"
+        android:background="@android:color/transparent"
+        android:layout_alignEnd="@+id/bottom_nav"
+        android:layout_marginTop="605dp"
+        android:layout_marginEnd="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipe_logo_title"
+        android:text="@string/recipe_logo_title"
+        android:layout_marginTop="635dp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="91dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopping_list_logo_title"
+        android:text="@string/shopping_list_logo_title"
+        android:layout_marginTop="635dp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="250dp"/>
+
+    <TextView
+        android:id="@+id/text_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:text="@string/drinks_recipes_title"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_recipe"
+        android:contentDescription="@string/add_new_recipe_button_content_description"
+        android:src="@drawable/add_item"
+        android:background="@android:color/transparent"
+        android:layout_alignEnd="@+id/text_recipes"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="20dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipe_list"
+        android:layout_below="@+id/text_recipes"
+        android:layout_above="@+id/bottom_nav"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="4dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+
+</RelativeLayout>

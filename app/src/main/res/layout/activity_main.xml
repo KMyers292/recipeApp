@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/appTitle"
+        android:text="@string/main_app_title"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:background="@drawable/border_bottom" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border_top" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipe_logo"
+        android:contentDescription="@string/recipe_logo_button_content_description"
+        android:src="@drawable/recipes_button"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="605dp"
+        android:layout_marginStart="100dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopping_list_logo"
+        android:contentDescription="@string/shopping_list_button_content_description"
+        android:src="@drawable/shopping_list_button"
+        android:background="@android:color/transparent"
+        android:layout_alignEnd="@+id/bottom_nav"
+        android:layout_marginTop="605dp"
+        android:layout_marginEnd="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipe_logo_title"
+        android:text="@string/recipe_logo_title"
+        android:layout_marginTop="635dp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="91dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopping_list_logo_title"
+        android:text="@string/shopping_list_logo_title"
+        android:layout_marginTop="635dp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="250dp"/>
+
+    <TextView
+        android:id="@+id/text_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:text="@string/recipes_title"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+
+    <GridLayout
+        android:id="@+id/mainGrid"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:layout_below="@+id/text_recipes"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/breakfast_logo"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:scaleType="fitXY"
+                android:id="@+id/breakfastImage"
+                android:contentDescription="@string/breakfast_recipes_button_content_description" />
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/breakfast_button_title"
+                android:layout_below="@+id/breakfastImage"
+                android:background="@drawable/border_three_sides"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/lunch_logo"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:scaleType="fitXY"
+                android:id="@+id/lunchImage"
+                android:contentDescription="@string/lunch_recipes_button_content_description"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lunch_button_title"
+                android:layout_below="@+id/lunchImage"
+                android:background="@drawable/border_three_sides"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/dinner_logo"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:scaleType="fitXY"
+                android:id="@+id/dinnerImage"
+                android:contentDescription="@string/dinner_recipes_button_content_description"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dinner_button_title"
+                android:layout_below="@+id/dinnerImage"
+                android:background="@drawable/border_three_sides"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/dessert_logo"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:scaleType="fitXY"
+                android:id="@+id/dessertImage"
+                android:contentDescription="@string/dessert_recipes_button_content_description"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dessert_button_title"
+                android:layout_below="@+id/dessertImage"
+                android:background="@drawable/border_three_sides"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/drinks_logo"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:scaleType="fitXY"
+                android:id="@+id/drinksImage"
+                android:contentDescription="@string/drinks_recipes_button_content_description"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/drinks_button_title"
+                android:layout_below="@+id/drinksImage"
+                android:background="@drawable/border_three_sides"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/snacks_logo"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:scaleType="fitXY"
+                android:id="@+id/snacksImage"
+                android:contentDescription="@string/snacks_recipes_button_content_description"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/snacks_button_title"
+                android:layout_below="@+id/snacksImage"
+                android:background="@drawable/border_three_sides"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/other_logo"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:scaleType="fitXY"
+                android:id="@+id/otherImage"
+                android:contentDescription="@string/other_recipes_button_content_description"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/other_button_title"
+                android:layout_below="@+id/otherImage"
+                android:background="@drawable/border_three_sides"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/all_logo"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:scaleType="fitXY"
+                android:id="@+id/allImage"
+                android:contentDescription="@string/all_recipes_button_content_description"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/all_button_title"
+                android:layout_below="@+id/allImage"
+                android:background="@drawable/border_three_sides"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent" />
+
+        </RelativeLayout>
+    </GridLayout>
+</RelativeLayout>
